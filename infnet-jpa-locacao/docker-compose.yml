@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mysql-infnet-jpa:
+    image: mysql:5.7
+    container_name: mysql-infnet-jpa
+    hostname: localhost
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "loca"
+      MYSQL_DATABASE: locacao
+      MYSQL_USER: "loca"
+      MYSQL_PASSWORD: "loca"
+  #  volumes:
+   #   - ./sql/data:/var/lib/mysql
+    #  - ./scripts/sql/setup_database.sql:/docker-entrypoint-initdb.d/setup_database.sql
+    command: ["mysqld", "--log-bin=mysql-bin", "--server-id=1"]
+
