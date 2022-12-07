@@ -14,17 +14,9 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 public class AppLocacao {
 
-
-    @Bean
-    @LoadBalanced
-    public RestTemplate getRestTemplate() {
-        return new RestTemplate();
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(AppLocacao.class, args);
     }
-
 
 
 }

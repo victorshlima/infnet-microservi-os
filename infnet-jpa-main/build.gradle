@@ -36,6 +36,14 @@ dependencies {
     implementation 'junit:junit:4.13.1'
     implementation 'org.jetbrains:annotations:20.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+
+    //qual dos 2??
+    implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin:3.1.1'
+    implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+
+
 }
 
 tasks.named('test') {

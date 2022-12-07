@@ -16,3 +16,7 @@ services:
     #  - ./scripts/sql/setup_database.sql:/docker-entrypoint-initdb.d/setup_database.sql
     command: ["mysqld", "--log-bin=mysql-bin", "--server-id=1"]
 
+  zipkin_infnet:
+    image: openzipkin/zipkin-slim
+    ports:
+      - "9411:9411"
