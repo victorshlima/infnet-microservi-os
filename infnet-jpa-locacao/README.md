@@ -17,8 +17,12 @@ http://localhost:9411
 
 
 **PAPERTRAIL**
+
+*** CONFIGURAR UMA NOVA MÁQUINA DO PAPER TRAIL
+limite máximo de logs 50 mb free, criar novamente quando for necessário testar
+
 https://papertrailapp.com/
-Logs to: logs2.papertrailapp.com:27925
+Logs to: logs2.papertrailapp.com:27925 <-- ONFIGURAR UMA NOVA MÁQUINA DO PAPER TRAIL
 
 Setar o profile name
 <springProfile name="default">
