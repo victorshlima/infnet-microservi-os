@@ -18,7 +18,12 @@ public class GatewayApplication {
 
 	@Bean
 	public RouteLocator routes(RouteLocatorBuilder builder){
-		return builder.routes().route(p -> p.path("/catalogo/**")
+		return builder.routes()
+				.route(p -> p.path("/catalogo/**")
+						.filters(f -> f.circuitBreaker(
+								config -> config.setName("mycmd")
+										.setFallbackUri("forward:/fallback")
+						))
 				.uri("http://localhost:8101"))
 				.route(p ->
 						p.path("/carros/**")
