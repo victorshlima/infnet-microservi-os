@@ -2,7 +2,7 @@ version: '3'
 services:
   mysql-infnet-jpa2:
     image: mysql:5.7
-    container_name: mysql-infnet-jpa2
+    container_name: locacao-api-db
     hostname: localhost
     ports:
       - "3306:3306"
